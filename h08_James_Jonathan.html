@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--insert internal css code here-->
+		<link href="h08_James_Jonathan.css" type="text/css" rel="stylesheet"></style>
+	</head>
+	<body onload="initialize()">
+
+
+		<h1 id= "appName">Make Me Rich Calculator!</h1>
+		<!--below is the html for the inputs in the form-->
+		<hr>
+		<form id="richCalc">
+			<table id="table" class="center">
+				<tr>
+					<td>
+						<input 	id="startAgeId" type="number"
+								value="25" min="21" max="100" step="any"
+								placeholder="Starting Age" required>
+					</td>
+					<td>
+						<input 	id="retireAgeId" type="number"
+								value="65" min="40" max="70" step="any"
+								placeholder="Retirement Age" required>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<input 	id="startSalaryId" type="number"
+								value="50000" min="20000" max="9999999" step="any"
+								placeholder="Starting Salary" required>
+					</td>
+					<td>
+						<input 	id="annualSaveId" type="number"
+								value="10" min="5" max="99" step="any"
+								placeholder="Annual Savings %" required>
+					</td>
+				</tr>				
+				<tr>
+					<td>
+						<input 	id="annualRaiseId" type="number"
+								value="2" min="1" max="5" step="any"
+								placeholder="Annual Raise %" required>
+					</td>
+					<td>
+						<input 	id="annualIntId" type="number"
+								value="7" min="2" max="10" step="any"
+								placeholder="Annual Interest Rate %" required>
+					</td>
+				</tr>
+			</table>
+
+			<div id="buttonDivId" class="center">
+				<button type="button" onClick="clearInputs(this.form)"> Clear </button>
+			
+				<button type="button" onClick="loadDefaults(this.form)"> Defaults </button>
+			
+				<button type="button" onClick="makeRich(this.form)"> MMR! </button>
+			</div>
+		</form>
+
+		<hr>
+		<!--hr is one of the few elements that doesn't need a closing tag-->
+
+
+		<!--results div split into two sections-->
+		<div id="results" class="center">
+			<table id="summaryResult" class="sumResult">
+				<tr><td>40</td><td>:Years to invest</td></tr>
+				<tr><td>1,473,440</td><td>:Retirement fund</td></tr> 
+				<tr><td>3,130,501</td><td>:Life Salary</td></tr>
+				<tr><td>313,050</td><td>:Total saved</td></tr>
+				<tr><td>1,160,390</td><td>:Earned interest</td></tr>
+			</table>  
+
+		<table id="Result" class="sumResult">
+			<tr><th>Age</th><th>Salary</th><th>Savings</th></tr>
+		</table> 
+
+		<table id="Result2" class="sumResult">
+			<th>Interest</th><th>Retirement</th></tr>
+		</table>
+
+		<script type="text/javascript" src="./FormattingToolsLibrary.js"></script>
+
+		<script type="text/javascript" src="h08_James_Jonathan.js"></script>
+		<!--check for typos-->
+
+		</body>
+</html>
